@@ -138,7 +138,7 @@ function vendorToItem(v) {
       website:     link(v.website),
       region:      str(v.region),
       country:     str(v.country),
-      logoUrl:     img(`${LOGO_BASE}${v.logo}`),
+      logoUrl:     img(`${LOGO_BASE}logos/${v.logo}`),
       description: str(v.description),
       socialX:     link(v.social?.x),
       socialIg:    link(v.social?.instagram),

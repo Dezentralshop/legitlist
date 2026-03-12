@@ -1,31 +1,38 @@
 ## What's in this PR
 
-- [ ] New vendor listing
-- [ ] Update to existing listing
-- [ ] Removal / deactivation
+**Type:** New vendor listing
+
+<!-- Replace the value above with one of these when needed:
+Update to existing listing
+Removal / deactivation
+-->
 
 ---
 
 ## About your shop
 
+_Replace the example values below with your real details._
+
 | | |
 |---|---|
-| **Shop name** | |
-| **Website** | |
-| **Region** | |
-| **Where to find you in the community** | |
+| **Shop name** | Pivotal Mining |
+| **Website** | https://pivotalmining.com |
+| **Region** | North America |
+| **Where to find you in the community** | https://x.com/pivotalmining |
 
 ---
 
-## Vendor checklist
+## Vendor confirmation
 
-_Fill this in yourself. The community will verify during review._
+_Use Yes/No for each line. Keep the text and just replace the value._
 
-- [ ] I sell genuine Bitaxe hardware
-- [ ] My shop is live and active
-- [ ] I am reachable in the community
-- [ ] I am not aware of open fraud or counterfeit reports about my shop
-- [ ] I understand listings can be removed if confirmed issues arise
+| | |
+|---|---|
+| I sell genuine Bitaxe hardware | Yes |
+| My shop is live and active | Yes |
+| I am reachable in the community | Yes |
+| I am not aware of open fraud or counterfeit reports about my shop | Yes |
+| I understand listings can be removed if confirmed issues arise | Yes |
 
 ---
 

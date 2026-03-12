@@ -44,7 +44,7 @@ for (const file of files) {
     continue
   }
 
-  // Logo filename must match slug (e.g. logos/pivotal-mining.png)
+  // Logo filename must match slug (e.g. pivotal-mining.png)
   const logoName = path.parse(data.logo).name
   if (logoName !== data.slug) {
     console.error(`❌ ${file} — Logo filename '${logoName}' does not match slug '${data.slug}'`)
@@ -53,7 +53,7 @@ for (const file of files) {
   }
 
   // Logo is required; missing or oversized is an error
-  const logoPath = path.resolve(data.logo)
+  const logoPath = path.resolve("./logos", data.logo)
   if (!fs.existsSync(logoPath)) {
     console.error(`❌ ${file} — Logo not found: ${data.logo}`)
     errors++

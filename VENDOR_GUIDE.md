@@ -62,7 +62,7 @@ Paste this example, then replace the sample details with your own shop details:
   "website": "https://yourshop.com",
   "region": "Europe",
   "country": "Italy",
-  "logo": "logos/your-shop-name.png",
+  "logo": "your-shop-name.png",
   "description": "Tell miners who you are — what you sell, where you ship, how long you've been at it. Keep it under 280 characters.",
   "active": true,
   "social": {
@@ -113,7 +113,7 @@ Use this title:
 
 `Add vendor: Your Shop Name`
 
-GitHub will show you a short form with checkboxes and a few questions.
+GitHub will show you a short form with pre-filled example fields.
 
 Complete these sections:
 - pick what this PR is (new listing, update, or removal)
@@ -121,7 +121,7 @@ Complete these sections:
 - your website
 - your region
 - where people can find you in the community
-- vendor checklist
+- vendor confirmation (Yes/No)
 
 Then click **Create pull request**.
 
