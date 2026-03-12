@@ -23,6 +23,10 @@ const LOGO_BASE =
 
 const COLLECTION_NAME = "Vendors"
 
+const RETRY_ATTEMPTS = 4
+const RETRY_DELAY_MS = 8000
+const RETRY_MAX_DELAY_MS = 30000
+
 // CMS field schema — edit with care; removing fields will lose CMS data
 const FIELDS = [
   { id: "vendorName",   type: "string", name: "Vendor Name" },
@@ -59,6 +63,28 @@ function loadVendors() {
 const str  = (value)        => ({ type: "string", value: value ?? "" })
 const link = (value)        => ({ type: "link",   value: value || null })
 const img  = (value)        => ({ type: "image",  value: value || null })
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms))
+}
+
+async function withRetry(label, fn, attempts = RETRY_ATTEMPTS, baseDelayMs = RETRY_DELAY_MS) {
+  let lastError
+  for (let attempt = 1; attempt <= attempts; attempt++) {
+    try {
+      return await fn()
+    } catch (err) {
+      lastError = err
+      if (attempt === attempts) break
+      const retryDelayMs = Math.min(baseDelayMs * attempt, RETRY_MAX_DELAY_MS)
+      const message = err?.message || String(err)
+      console.warn(`⚠️  ${label} failed (attempt ${attempt}/${attempts}): ${message}`)
+      console.warn(`↻ Retrying in ${Math.round(retryDelayMs / 1000)}s...`)
+      await sleep(retryDelayMs)
+    }
+  }
+  throw lastError
+}
 
 function vendorToItem(v) {
   return {
@@ -133,9 +159,9 @@ async function main() {
 
     // ── Publish & deploy ──────────────────────────────────────────────────
     console.log("🚀 Publishing…")
-    const { deployment } = await framer.publish()
+    const { deployment } = await withRetry("Publish", () => framer.publish())
     console.log(`🌐 Deploying (id: ${deployment.id})…`)
-    await framer.deploy(deployment.id)
+    await withRetry("Deploy", () => framer.deploy(deployment.id))
 
     console.log("🎉 Sync complete!")
   } finally {
@@ -145,6 +171,9 @@ async function main() {
 }
 
 main().catch((err) => {
-  console.error("❌ Sync failed:", err)
+  console.error("❌ Sync failed:", err?.message || err)
+  if (err?.cause) {
+    console.error("Cause:", err.cause)
+  }
   process.exit(1)
 })
