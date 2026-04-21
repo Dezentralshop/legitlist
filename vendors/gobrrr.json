@@ -1,0 +1,16 @@
+{
+  "name": "Go Brrr",
+  "slug": "gobrrr",
+  "website": "https://gobrrr.me",
+  "region": "Europe",
+  "country": "Austria",
+  "description": "Austria's OG Bitaxe Vendor. Est. Block 698517 3D prints for sovereign individuals! 3D-design, on-demand printing and open-source hardware shop!",
+  "active": true,
+  "social": {
+    "x": "https://x.com/GoBrrr_me",
+    "instagram": "",
+    "youtube": "",
+    "tiktok": "",
+    "nostr": "https://primal.net/p/nprofile1qqs06qnxfpth00tna978cdl4yryreqhrvtlycfdxh6flxwqqs02xg6ctrlrux"
+  }
+}
