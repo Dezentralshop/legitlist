@@ -1,0 +1,16 @@
+{
+  "name": "Ix Tech",
+  "slug": "ix-tech",
+  "website": "https://ixtech.xyz",
+  "region": "North America",
+  "country": "USA",
+  "description": "Ix Tech is a US-based open-source Bitcoin mining hardware company offering Bitaxe, Nerdaxe, and NerdQX miners alongside bespoke heatsinks and precision-crafted accessories — designed and tested by miners, for miners. Active since 2024, shipping worldwide.",
+  "active": true,
+  "social": {
+    "x": "https://x.com/IxTechCrypto",
+    "instagram": "https://www.instagram.com/ixtech.xyz",
+    "youtube": "https://www.youtube.com/@ixtech_xyz",
+    "tiktok": "https://www.tiktok.com/ixtech_xyz",
+    "nostr": "https://primal.net/@IxTech"
+  }
+}
