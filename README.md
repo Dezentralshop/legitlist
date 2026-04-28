@@ -1,4 +1,4 @@
-# ⛏️ legitlist
+# ⛏️ Vendor List
 
 ### The community-verified list of trusted Bitaxe vendors.
 
