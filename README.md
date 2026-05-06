@@ -79,4 +79,10 @@ Bitaxe is open-source Bitcoin mining hardware designed for solo miners. Built by
 
 ---
 
+## Pull request change requests
+
+Open PR's have a timeline of two weeks to fullfill requests otherwise they will be closed and they need to reopen a pull request.
+
+---
+
 <sub>MIT License</sub>
