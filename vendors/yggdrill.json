@@ -1,0 +1,16 @@
+{
+  "name": "Yggdrill",
+  "slug": "yggdrill",
+  "website": "https://yggdrill.com",
+  "region": "Europe",
+  "country": "Sweden",
+  "description": "A small store in northern Sweden, helping people learn about Bitcoin and mining.",
+  "active": true,
+  "social": {
+    "x": "https://x.com/YggdrillMining",
+    "instagram": "",
+    "youtube": "",
+    "tiktok": "",
+    "nostr": ""
+  }
+}
