@@ -85,4 +85,4 @@ Open PR's have a timeline of two weeks to fullfill requests otherwise they will 
 
 ---
 
-<sub>MIT License</sub>
+<sub>GNU AFFERO GENERAL PUBLIC LICENSE Version 3</sub>
